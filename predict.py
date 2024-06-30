@@ -6,6 +6,8 @@ from typing import Union
 from model import Transformer
 from config import config
 from dataset import Multi30kDe2En
+import torchtext
+torchtext.disable_torchtext_deprecation_warning()
 
 
 def translate_sentence(sentence: Union[list, str], model: Transformer, src_vocab: Vocab, trg_vocab: Vocab, max_len=50,
